@@ -2,8 +2,8 @@
 
 A web app that performs full CRUD on the Salesforce standard objects **Account, Opportunity, Lead, Contact and Case** without opening the Salesforce UI. Login uses **OAuth 2.0 (Authorization Code + PKCE)** through a Salesforce **External Client App**, and every operation uses the resulting tokens.
 
-- **Live URL:** _add your Render link here_
-- **Repository:** _add your GitHub link here_
+- **Live URL:** https://salesforce-crud-app-pzbo.onrender.com
+- **Repository:** https://github.com/Sonuanand07/salesforce-crud-app
 
 **Stack:** React 18 + Vite (frontend), Node.js 22 + Express (backend), Salesforce REST API.
 
@@ -58,6 +58,7 @@ npm start                  # http://localhost:3000
 ```
 
 Register `http://localhost:3000/auth/callback` as a callback URL in your External Client App.
+For the deployed app, also register `https://salesforce-crud-app-pzbo.onrender.com/auth/callback` and set `APP_URL` to `https://salesforce-crud-app-pzbo.onrender.com` in Render.
 
 **Hot-reload development** (two terminals): set `APP_URL=http://localhost:5173` in `.env`, register `http://localhost:5173/auth/callback`, then run `npm run dev` and `npm run dev:client` (open http://localhost:5173).
 

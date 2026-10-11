@@ -22,16 +22,16 @@ If Git asks for a password, use a Personal Access Token (GitHub > Settings > Dev
 1. Sign in at https://render.com with GitHub.
 2. **New > Web Service** > select your repo.
 3. Settings: **Runtime** Node, **Build Command** `npm install && npm run build`, **Start Command** `npm start`, **Instance Type** Free. (Or use **New > Blueprint**, which reads `render.yaml`.)
-4. Choose the service **name** first. Your URL will be `https://<name>.onrender.com`.
+4. Choose the service **name** first. The current deployed URL is `https://salesforce-crud-app-pzbo.onrender.com`; if Render assigns a different URL, use that actual URL in all settings below.
 5. Add **Environment Variables**:
    - `SF_CLIENT_ID` = consumer key
    - `SF_CLIENT_SECRET` = consumer secret
-   - `APP_URL` = `https://<name>.onrender.com` (no trailing slash)
+   - `APP_URL` = `https://salesforce-crud-app-pzbo.onrender.com` (no trailing slash)
    - `SF_LOGIN_URL` = `https://login.salesforce.com`
    - `NODE_VERSION` = `22`
 6. Click **Create Web Service** and wait for "Live".
-7. In Salesforce, add `https://<name>.onrender.com/auth/callback` to the External Client App callback URLs and save.
-8. Open the URL and click **Log in with Salesforce**.
+7. In Salesforce, add `https://salesforce-crud-app-pzbo.onrender.com/auth/callback` to the External Client App callback URLs and save.
+8. Open https://salesforce-crud-app-pzbo.onrender.com and click **Log in with Salesforce**.
 
 ## 3. Free-tier notes
 - The service sleeps after ~15 minutes idle; the first request then takes ~30-60 seconds. Open the link yourself shortly before you send it, and mention this in your email.

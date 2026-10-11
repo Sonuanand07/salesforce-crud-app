@@ -15,7 +15,7 @@ Salesforce menu labels change between releases. If something is named slightly d
 5. **Callback URL**: add one per line:
    - `http://localhost:3000/auth/callback` (local run)
    - `http://localhost:5173/auth/callback` (Vite dev server, optional)
-   - `https://<your-app>.onrender.com/auth/callback` (production, add after you know the URL)
+   - `https://salesforce-crud-app-pzbo.onrender.com/auth/callback` (production)
 6. **OAuth Scopes**, move these to Selected:
    - *Manage user data via APIs (api)*
    - *Perform requests at any time (refresh_token, offline_access)*
@@ -38,6 +38,8 @@ SF_CLIENT_ID=<consumer key>
 SF_CLIENT_SECRET=<consumer secret>
 APP_URL=http://localhost:3000
 ```
+
+For the deployed Render service, set `APP_URL=https://salesforce-crud-app-pzbo.onrender.com` in Render's environment settings (not in the repository `.env`). The production callback URL in the External Client App must be exactly `https://salesforce-crud-app-pzbo.onrender.com/auth/callback`.
 
 ## Troubleshooting
 | Error | Fix |
