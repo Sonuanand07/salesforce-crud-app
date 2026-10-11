@@ -1,0 +1,20 @@
+# Render Blueprint: New > Blueprint > pick this repo.
+services:
+  - type: web
+    name: sf-crud-app            # your URL will be https://sf-crud-app.onrender.com (change the name if taken)
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: SF_CLIENT_ID
+        sync: false
+      - key: SF_CLIENT_SECRET
+        sync: false
+      - key: SF_LOGIN_URL
+        value: https://login.salesforce.com
+      - key: APP_URL
+        sync: false              # e.g. https://sf-crud-app.onrender.com
